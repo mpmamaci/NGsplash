@@ -1,0 +1,18 @@
+<div>
+  <h1>Detail Image View</h1>
+  <div *ngIf="isDemoMode()">DEMO</div>
+  <app-linked-img [href]="imageHref" [imageUrl]="imageUrl"></app-linked-img>
+  <ul>
+    <li *ngFor="let info of infos">
+      <p *ngIf="info.isUrl; else noLink">
+        <b>{{ info.name }}</b> :
+        <a [href]="info.information">{{ info.information }}</a>
+      </p>
+      <ng-template #noLink>
+        <p>
+          <b>{{ info.name }}</b> : {{ info.information }}
+        </p>
+      </ng-template>
+    </li>
+  </ul>
+</div>
