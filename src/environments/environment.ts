@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  unsplashAccessKey: 'UNLASH_ACCESS_KEY',
+  unsplashAccessKey: '',
 };
 
 /*
