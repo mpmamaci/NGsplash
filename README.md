@@ -8,6 +8,7 @@ Emmeded the Unsplash API inside an Angular Application, generated with [Angular 
 
 1. `npm install`
 2. Enter your unsplash `accessKey` inside the `environment.ts`
+   - Leave `accessKey` equals `""` to enter Demo Mode 
 3. `npm start`
 
 ### Release
