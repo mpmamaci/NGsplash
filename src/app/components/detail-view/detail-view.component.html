@@ -1,18 +1,24 @@
-<div>
-  <h1>Detail Image View</h1>
+<div class="m-5">
+  <h1 class="title">Detail Image View</h1>
   <div *ngIf="isDemoMode()">DEMO</div>
-  <app-linked-img [href]="imageHref" [imageUrl]="imageUrl"></app-linked-img>
-  <ul>
-    <li *ngFor="let info of infos">
-      <p *ngIf="info.isUrl; else noLink">
-        <b>{{ info.name }}</b> :
-        <a [href]="info.information">{{ info.information }}</a>
-      </p>
-      <ng-template #noLink>
-        <p>
-          <b>{{ info.name }}</b> : {{ info.information }}
+  <div class="columns">
+    <ul class="column is-one-third">
+      <li *ngFor="let info of infos">
+        <p *ngIf="info.isUrl; else noLink">
+          <b>{{ info.name }}</b> :
+          <a [href]="info.information">{{ info.information }}</a>
         </p>
-      </ng-template>
-    </li>
-  </ul>
+        <ng-template #noLink>
+          <p>
+            <b>{{ info.name }}</b> : {{ info.information }}
+          </p>
+        </ng-template>
+      </li>
+    </ul>
+    <app-linked-img
+      class="column is-two-third"
+      [href]="imageHref"
+      [imageUrl]="imageUrl"
+    ></app-linked-img>
+  </div>
 </div>

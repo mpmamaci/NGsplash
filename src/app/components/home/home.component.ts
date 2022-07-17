@@ -27,6 +27,10 @@ export class HomeComponent {
     }
   }
 
+  noImagesSet() {
+    return this.images.length <= 0;
+  }
+
   isDemoMode(): boolean {
     return this.unsplashService.demoMode;
   }

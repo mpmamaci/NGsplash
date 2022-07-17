@@ -1,27 +1,24 @@
 # NgSplash
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+Emmeded the Unsplash API inside an Angular Application, generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
-## Development server
+## Gettings Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Development
 
-## Code scaffolding
+1. `npm install`
+2. Enter your unsplash `accessKey` inside the `environment.ts`
+3. `npm start`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Release
 
-## Build
+1. Get a Release Version "link"
+2. Start a http server
+   - https://gist.github.com/willurd/5720255
+   - Caution: Wrong Settings leads to non working angular router
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Demo Mode
 
-## Running unit tests
+If you have no `accessKey` you can use this Application in `Demo Mode`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+In `Demo Mode` this Application has not connection to the unsplash Server and returns the static values inside the `assets/demo-image-response.json` file.

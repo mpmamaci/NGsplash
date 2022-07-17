@@ -1,21 +1,37 @@
-<div>
-  <h1>Unsplash Image Search</h1>
-
-  <div *ngIf="isDemoMode()">
-    <p>Demo Mode</p>
-    <input type="text" #accessKeyInput />
-    <button (click)="exitDemoMode(accessKeyInput.value)">
-      Enter AccessKey
-    </button>
+<div class="m-5">
+  <div class="columns">
+    <h1 class="column title">Unsplash Image Search</h1>
   </div>
+  <div class="columns">
+    <div class="column">
+      <div class="m-5" *ngIf="isDemoMode()">
+        <p>Demo Mode</p>
+        <input type="text" #accessKeyInput />
+        <button (click)="exitDemoMode(accessKeyInput.value)">
+          Enter AccessKey
+        </button>
+      </div>
 
-  <input type="text" #searchInput />
-  <input type="number" #quantity min="1" max="10" value="1" />
-  <button (click)="handleSearchClick(searchInput, quantity)">Search</button>
-  <div *ngFor="let image of images">
-    <app-linked-img
-      [imageUrl]="image.urls.small"
-      [imageId]="image.id"
-    ></app-linked-img>
+      <input class="input mb-2" type="text" #searchInput />
+      <input
+        class="input mb-2"
+        type="number"
+        #quantity
+        min="1"
+        max="10"
+        value="1"
+      />
+      <button class="button" (click)="handleSearchClick(searchInput, quantity)">
+        Search
+      </button>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column" *ngFor="let image of images">
+      <app-linked-img
+        [imageUrl]="image.urls.small"
+        [imageId]="image.id"
+      ></app-linked-img>
+    </div>
   </div>
 </div>
